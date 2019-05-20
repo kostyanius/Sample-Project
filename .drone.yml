@@ -6,3 +6,7 @@ steps:
   image: maven
   commands:
   - mvn package
+- name: test
+  image: maven
+  commands: 
+  - mvn -Dtest="drone/src/target/java_eclipse-1.0.jar" test
